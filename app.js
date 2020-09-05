@@ -21,7 +21,18 @@ app.use(express.static(path.join(__dirname, '/views')));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
+//connect to mongoose
+// const mongoose = require('mongoose')
+// const mongoUrl = "mongodb://127.0.0.1/27017"
+
+// mongoose.connect(mongoUrl, {useNewUrlParser: true}, (err) => {
+//   if (err)
+//       console.error(err);
+//   else
+//       console.log("Connected to the mongodb"); 
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
