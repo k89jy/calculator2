@@ -34,8 +34,7 @@ router.post('/login', function (req, res, next) {
         res.render('main.html');
       }
     })
-   
-
+  
   }
   else {//아이디와 비밀번호가 일치 하지 않앗을 경우
 
@@ -44,16 +43,11 @@ router.post('/login', function (req, res, next) {
   ///mongodb 와 연동하기
 });
 
-router.get('/do', function (req, res, next) {
-
-
-
-})
-
-
 
 router.get('/thelist', function (req, res) {
   var MongoClient
+
+  res.render('show.html',{"data":"12"})
 })
 
 module.exports = router;

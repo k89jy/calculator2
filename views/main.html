@@ -63,7 +63,7 @@
             </tr>
             <tr>
                 <td><button value="AC" id = "ac" >AC</button></td>
-                <td><button></button></td>
+                <td><button id = "save">저장</button></td>
                 <td><button></button></td>
                 <td><button></button></td>
             </tr>
@@ -98,7 +98,18 @@
 
     //버튼 클릭시 value를 얻어 id = display div tag 에 넣어준다
     var previous_button; // 전에 클릭햇던 값
-    var fired_button 
+    var fired_button
+    var valueList = []
+    // $('#save').click(function(){
+
+       
+
+        
+
+    //     console.log(valueList)
+
+    // })
+
     $('.number_operator').click(function(){
         fired_button = $(this).val();//각각 버튼 tag의 값을 받아온다
        
@@ -133,7 +144,8 @@
         else if(value[1] == "-"){
             result = Number(value[0]) - Number(value[2])
         }
-      
+        valueList.push(fired_button)
+        console.log(valueList)
         fired_button = result// 결과 값을 fired_button에 저장한다.
         $('#display').html(result)// 결과 값을 출력 한다.
         
@@ -156,6 +168,8 @@
         $("#display").html(value)
         }
     })
+
+
 
 </script>
 
